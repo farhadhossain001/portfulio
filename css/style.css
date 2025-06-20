@@ -397,6 +397,8 @@ body {
   gap: 2rem;
   text-align: left;
   justify-content: center;
+  width: 135%;
+  margin-left: 20px;
 }
 
 /* Hero Intro Styles */
@@ -816,6 +818,8 @@ body {
   .hero-main {
     text-align: center;
     align-items: center;
+    width: 100%;
+    margin-left: 0;
   }
 
   .title-line:last-child {
