@@ -15,9 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all functionality
     initCustomCursor();
     initProfileCircle();
-    initProjectFilters();
     initScrollEffects();
     initAnimations();
+
+    // Initialize project filters after a short delay to ensure DOM is ready
+    setTimeout(() => {
+        initProjectFilters();
+    }, 100);
 });
 
 // ===== LOADING SCREEN =====
@@ -356,39 +360,41 @@ function initProjectFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectItems = document.querySelectorAll('.project-item');
 
+    if (filterButtons.length === 0 || projectItems.length === 0) {
+        console.warn('Filter buttons or project items not found');
+        return;
+    }
+
     filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+
             const filter = this.getAttribute('data-filter');
 
             // Update active button
             filterButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
 
-            // Filter projects
+            // First, hide all items immediately
             projectItems.forEach(item => {
-                const category = item.getAttribute('data-category');
-
-                if (filter === 'all' || category === filter) {
-                    item.classList.remove('hidden');
-                    item.style.display = 'block';
-                } else {
-                    item.classList.add('hidden');
-                    setTimeout(() => {
-                        if (item.classList.contains('hidden')) {
-                            item.style.display = 'none';
-                        }
-                    }, 300);
-                }
+                item.style.animation = '';
+                item.classList.add('hidden');
             });
 
-            // Add animation effect
+            // Then show matching items with animation after a short delay
             setTimeout(() => {
-                projectItems.forEach((item, index) => {
-                    if (!item.classList.contains('hidden')) {
-                        item.style.animation = `fadeInUp 0.6s ease-out ${index * 0.1}s both`;
+                let visibleIndex = 0;
+                projectItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+
+                    if (filter === 'all' || category === filter) {
+                        // Show item
+                        item.classList.remove('hidden');
+                        item.style.animation = `fadeInUp 0.6s ease-out ${visibleIndex * 0.1}s both`;
+                        visibleIndex++;
                     }
                 });
-            }, 100);
+            }, 50);
         });
     });
 }

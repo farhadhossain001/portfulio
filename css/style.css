@@ -1025,16 +1025,17 @@ body {
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 0;
+    padding: 0 1rem;
     margin: 0 auto 4rem;
     width: 100%;
-    max-width: calc(100vw - 3rem);
+    max-width: calc(100vw - 2rem);
   }
 
   .project-card {
     margin: 0;
-    width: 100%;
-    max-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
 
   .work-filter {
@@ -1213,14 +1214,32 @@ body {
   .projects-grid {
     width: calc(100vw - 2rem) !important;
     max-width: calc(100vw - 2rem) !important;
+    padding: 0 1rem !important;
   }
 
   .project-card {
     border-radius: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
   }
 
   .project-info {
     padding: 0.75rem !important;
+  }
+
+  .project-image {
+    height: 160px !important;
+  }
+
+  .project-name {
+    font-size: 1.1rem !important;
+  }
+
+  .project-desc {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
   }
 }
 
@@ -1369,14 +1388,31 @@ body {
   box-shadow: 0 5px 15px rgba(0, 255, 136, 0.2);
 }
 
+.filter-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 /* Projects Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 350px));
   gap: 2rem;
   margin-bottom: 4rem;
   width: 100%;
   max-width: 100%;
+  justify-content: center;
+  min-height: 400px; /* Prevent layout shift during filtering */
+}
+
+/* Tablet override for projects grid */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 350px));
+    justify-content: center;
+    gap: 1.5rem;
+  }
 }
 
 /* Mobile override for projects grid */
@@ -1386,18 +1422,24 @@ body {
     gap: 1.5rem;
     width: 100%;
     max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .project-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
 }
 
 .project-item {
   opacity: 1;
-  transition: var(--transition-normal);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  transform: translateY(0);
 }
 
 .project-item.hidden {
-  opacity: 0;
-  transform: scale(0.8);
-  pointer-events: none;
+  display: none !important;
 }
 
 /* Project Cards */
@@ -1411,8 +1453,8 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 100%;
+  width: 350px;
+  max-width: 350px;
   box-sizing: border-box;
 }
 
