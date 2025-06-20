@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Farhad Hossain - Creative Frontend Developer. Crafting digital experiences with modern web technologies.">
+    <meta name="keywords" content="web developer, frontend developer, creative developer, UI/UX, React, JavaScript">
+    <meta name="author" content="Farhad Hossain">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Farhad Hossain - Creative Frontend Developer">
+    <meta property="og:description" content="Crafting digital experiences with modern web technologies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Farhad Hossain - Creative Frontend Developer">
+    <meta name="twitter:description" content="Crafting digital experiences with modern web technologies.">
+    <meta name="twitter:image" content="">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <title>Farhad Hossain - Creative Frontend Developer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Custom Font - Whispering Signature -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-text">
+                <span>F</span><span>A</span><span>R</span><span>H</span><span>A</span><span>D</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Circle -->
+    <div class="profile-circle">
+        <div class="profile-image">
+            <img src="assets/pic.jpg" alt="Farhad Hossain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="profile-placeholder">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+        <div class="status-dot"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-particles"></div>
+            <div class="floating-elements">
+                <div class="floating-shape shape-1"></div>
+                <div class="floating-shape shape-2"></div>
+                <div class="floating-shape shape-3"></div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-main">
+                <div class="hero-intro" data-aos="fade-up">
+                    <div class="hero-greeting">
+                        <span class="greeting-text">Hello, I'm</span>
+                        <div class="name-highlight">
+                            <span class="first-name">Farhad</span>
+                            <span class="last-name">Hossain</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-title-section" data-aos="fade-up" data-aos-delay="200">
+                    <h1 class="hero-title">
+                        <span class="title-line">Frontend Developer</span>
+                        <span class="title-line">& UI Designer</span>
+                    </h1>
+                    <div class="title-decoration">
+                        <div class="decoration-line"></div>
+                        <div class="decoration-dot"></div>
+                    </div>
+                </div>
+
+                <div class="hero-description" data-aos="fade-up" data-aos-delay="400">
+                    <p class="description-text">
+                        I create <span class="highlight">beautiful</span> and <span class="highlight">functional</span>
+                        web experiences that users love. Passionate about clean code, modern design,
+                        and bringing ideas to life through technology.
+                    </p>
+                </div>
+
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Available</span>
+                    </div>
+                </div>
+
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="800">
+                    <a href="#work" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                         <a href="#" class="social-link" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual" data-aos="fade-up" data-aos-delay="1000">
+                <div class="visual-container">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="window-controls">
+                                <span class="control red"></span>
+                                <span class="control yellow"></span>
+                                <span class="control green"></span>
+                            </div>
+                            <span class="window-title">portfolio.js</span>
+                        </div>
+                        <div class="window-content">
+                            <div class="code-line">
+                                <span class="line-number">1</span>
+                                <span class="code-text">
+                                    <span class="keyword">const</span>
+                                    <span class="variable">developer</span> = {
+                                </span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">2</span>
+                                <span class="code-text">
+                                    &nbsp;&nbsp;<span class="property">name</span>:
+                                    <span class="string">'Farhad Hossain'</span>,
+                                </span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">3</span>
+                                <span class="code-text">
+                                    &nbsp;&nbsp;<span class="property">skills</span>:
+                                    <span class="array">['React', 'JS', 'CSS']</span>,
+                                </span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">4</span>
+                                <span class="code-text">
+                                    &nbsp;&nbsp;<span class="property">passion</span>:
+                                    <span class="string">'Creating Amazing UX'</span>
+                                </span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">5</span>
+                                <span class="code-text">};</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-glow"></div>
+                </div>
+            </div>
+
+            <div class="hero-bottom" data-aos="fade-up" data-aos-delay="1200">
+                <div class="scroll-indicator">
+                    <span>Discover More</span>
+                    <div class="scroll-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-bg">
+            <div class="about-grid"></div>
+            <div class="about-particles"></div>
+            <div class="about-floating-elements">
+                <div class="about-floating-shape about-shape-1"></div>
+                <div class="about-floating-shape about-shape-2"></div>
+                <div class="about-floating-shape about-shape-3"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-number">02</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know the person behind the code</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-profile" data-aos="fade-right">
+                    <div class="profile-image-container">
+                        <div class="profile-image-wrapper">
+                            <img src="assets/pic.jpg" alt="Farhad Hossain" class="profile-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="profile-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="profile-border-animation"></div>
+                        <div class="profile-glow"></div>
+                    </div>
+
+                    <div class="profile-info">
+                        <h3 class="profile-name">Farhad Hossain</h3>
+                        <p class="profile-title">Frontend Developer & UI Designer</p>
+                        <div class="profile-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bangladesh</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-details" data-aos="fade-left">
+                    <div class="about-text">
+                        <h3>Who I Am</h3>
+                        <p>
+                            I'm a passionate frontend developer with a keen eye for design and a love for creating
+                            seamless user experiences. With over 3 years of experience in web development, I specialize
+                            in building modern, responsive websites and applications that not only look great but
+                            perform exceptionally.
+                        </p>
+                        <p>
+                            My journey in web development started with curiosity and has evolved into a career
+                            driven by innovation and continuous learning. I believe in writing clean, maintainable
+                            code and staying up-to-date with the latest technologies and best practices.
+                        </p>
+
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-code"></i>
+                                <div>
+                                    <h4>Clean Code</h4>
+                                    <p>Writing maintainable and scalable code</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div>
+                                    <h4>Responsive Design</h4>
+                                    <p>Creating seamless experiences across all devices</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-rocket"></i>
+                                <div>
+                                    <h4>Performance</h4>
+                                    <p>Optimizing for speed and user experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-section">
+                        <h3>Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>Frontend Technologies</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">TypeScript</span>
+                                    <span class="skill-tag">Next.js</span>
+                                    <span class="skill-tag">CSS3</span>
+                                    <span class="skill-tag">HTML5</span>
+                                    <span class="skill-tag">Tailwind CSS</span>
+                                    <span class="skill-tag">SASS</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Tools & Design</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">Figma</span>
+                                    <span class="skill-tag">VS Code</span>
+                                    <span class="skill-tag">Webpack</span>
+                                    <span class="skill-tag">Vite</span>
+                                    <span class="skill-tag">Adobe XD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="work">
+        <div class="work-bg">
+            <div class="work-grid"></div>
+            <div class="work-particles"></div>
+            <div class="work-floating-elements">
+                <div class="work-floating-shape work-shape-1"></div>
+                <div class="work-floating-shape work-shape-2"></div>
+                <div class="work-floating-shape work-shape-3"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Featured Work</h2>
+                <p class="section-subtitle">A showcase of my recent projects and creative solutions</p>
+            </div>
+
+            <div class="work-filter" data-aos="fade-up" data-aos-delay="200">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                <button class="filter-btn" data-filter="ui">UI/UX</button>
+                <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-item" data-category="ecommerce" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3>NovaWear</h3>
+                                    <p>Modern E-commerce Platform</p>
+                                    <div class="project-links">
+                                        <a href="https://novawear-ecommerce.vercel.app/" target="_blank" class="link-btn" title="Live Demo">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                        <a href="https://github.com/farhad-iptv/novawear-ecommerce" target="_blank" class="link-btn" title="GitHub">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-placeholder">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-category">E-commerce</span>
+                                <span class="project-year">2024</span>
+                            </div>
+                            <h3 class="project-name">NovaWear</h3>
+                            <p class="project-desc">Fashion retail platform with advanced filtering, shopping cart, and seamless checkout experience.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>PHP</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://novawear-ecommerce.vercel.app/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/farhad-iptv/novawear-ecommerce" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item" data-category="web" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3>TrackFlow</h3>
+                                    <p>Project Management Tool</p>
+                                    <div class="project-links">
+                                        <a href="https://trackflow-project.vercel.app/" target="_blank" class="link-btn" title="Live Demo">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                        <a href="https://github.com/farhad-iptv/trackflow-project" target="_blank" class="link-btn" title="GitHub">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-placeholder">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-category">Web App</span>
+                                <span class="project-year">2024</span>
+                            </div>
+                            <h3 class="project-name">TrackFlow</h3>
+                            <p class="project-desc">Comprehensive project management and workflow tracking application with real-time updates.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MySQL</span>
+                                <span>Socket.io</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://trackflow-project.vercel.app/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/farhad-iptv/trackflow-project" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item" data-category="ui" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3>TasteBite</h3>
+                                    <p>Food Delivery Interface</p>
+                                    <div class="project-links">
+                                        <a href="https://tastebite-food.vercel.app/" target="_blank" class="link-btn" title="Live Demo">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                        <a href="https://github.com/farhad-iptv/tastebite-food" target="_blank" class="link-btn" title="GitHub">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-placeholder">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-category">UI/UX</span>
+                                <span class="project-year">2023</span>
+                            </div>
+                            <h3 class="project-name">TasteBite</h3>
+                            <p class="project-desc">Intuitive food delivery app interface with smooth user experience and modern design.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>SCSS</span>
+                                <span>JavaScript</span>
+                                <span>Figma</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://tastebite-food.vercel.app/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/farhad-iptv/tastebite-food" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item" data-category="portfolio" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3>Creative Portfolio</h3>
+                                    <p>Personal Portfolio Website</p>
+                                    <div class="project-links">
+                                        <a href="https://my-demo-project-ashy.vercel.app/" target="_blank" class="link-btn" title="Live Demo">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                        <a href="https://github.com/farhad-iptv/portfolio-website" target="_blank" class="link-btn" title="GitHub">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-placeholder">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-category">Portfolio</span>
+                                <span class="project-year">2024</span>
+                            </div>
+                            <h3 class="project-name">Creative Portfolio</h3>
+                            <p class="project-desc">Modern, responsive portfolio website with dark theme and smooth animations.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>AOS</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://my-demo-project-ashy.vercel.app/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/farhad-iptv/portfolio-website" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item" data-category="web" data-aos="fade-up" data-aos-delay="700">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3>WeatherNow</h3>
+                                    <p>Weather Dashboard App</p>
+                                    <div class="project-links">
+                                        <a href="https://weathernow-dashboard.vercel.app/" target="_blank" class="link-btn" title="Live Demo">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                        <a href="https://github.com/farhad-iptv/weathernow-dashboard" target="_blank" class="link-btn" title="GitHub">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-placeholder">
+                                <i class="fas fa-cloud-sun"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-category">Web App</span>
+                                <span class="project-year">2023</span>
+                            </div>
+                            <h3 class="project-name">WeatherNow</h3>
+                            <p class="project-desc">Real-time weather dashboard with location-based forecasts and interactive maps.</p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>API</span>
+                                <span>CSS3</span>
+                                <span>Charts.js</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://weathernow-dashboard.vercel.app/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/farhad-iptv/weathernow-dashboard" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item" data-category="ecommerce" data-aos="fade-up" data-aos-delay="800">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <h3>TechStore</h3>
+                                    <p>Electronics E-commerce</p>
+                                    <div class="project-links">
+                                        <a href="https://techstore-electronics.vercel.app/" target="_blank" class="link-btn" title="Live Demo">
+                                            <i class="fas fa-external-link-alt"></i>
+                                        </a>
+                                        <a href="https://github.com/farhad-iptv/techstore-electronics" target="_blank" class="link-btn" title="GitHub">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-placeholder">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span class="project-category">E-commerce</span>
+                                <span class="project-year">2023</span>
+                            </div>
+                            <h3 class="project-name">TechStore</h3>
+                            <p class="project-desc">Electronics e-commerce platform with product comparison and review system.</p>
+                            <div class="project-tech">
+                                <span>Vue.js</span>
+                                <span>Laravel</span>
+                                <span>MySQL</span>
+                                <span>Stripe</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://techstore-electronics.vercel.app/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/farhad-iptv/techstore-electronics" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-cta" data-aos="fade-up" data-aos-delay="900">
+                <h3>Interested in working together?</h3>
+                <p>I'm always excited to take on new challenges and bring creative ideas to life.</p>
+                <a href="#contact" class="btn btn-primary">
+                    <span>Let's Talk</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="footer">
+        <div class="footer-bg">
+            <div class="footer-grid"></div>
+            <div class="footer-particles"></div>
+            <div class="footer-floating-elements">
+                <div class="footer-floating-shape footer-shape-1"></div>
+                <div class="footer-floating-shape footer-shape-2"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main" data-aos="fade-up">
+                    <div class="footer-intro">
+                        <div class="intro-badge">
+                            <i class="fas fa-rocket"></i>
+                            <span>Let's Work Together</span>
+                        </div>
+                        <h2 class="footer-title">Ready to Start Your Next Project?</h2>
+                        <p class="footer-subtitle">
+                            Transform your ideas into stunning digital experiences. Let's collaborate and create something extraordinary.
+                        </p>
+                        <div class="intro-features">
+                            <div class="feature-item">
+                                <i class="fas fa-lightning-bolt"></i>
+                                <span>Fast Delivery</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-palette"></i>
+                                <span>Creative Design</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-code"></i>
+                                <span>Clean Code</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-methods">
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h3>Email Me</h3>
+                                <p>hossainfarhad491@gmail.com</p>
+                                <a href="mailto:hossainfarhad491@gmail.com" class="contact-link">Send Message</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h3>Call Me</h3>
+                                <p>+8801993-813413</p>
+                                <a href="tel:+8801993-813413" class="contact-link">Call Now</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h3>Location</h3>
+                                <p>Jashore, Khulna, Bangladesh</p>
+                                <a href="#" class="contact-link">View Map</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-cta" data-aos="fade-up" data-aos-delay="500">
+                        <h3>Ready to Start Your Project?</h3>
+                        <div class="cta-buttons">
+                            <a href="mailto:hossainfarhad491@gmail.com" class="btn btn-primary">
+                                <span>Get In Touch</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline">
+                                <span>Download CV</span>
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom" data-aos="fade-up" data-aos-delay="700">
+                <div class="footer-divider"></div>
+                <div class="footer-bottom-content">
+                    <div class="footer-brand">
+                        <span class="brand-name">Farhad Hossain</span>
+                        <span class="brand-tagline">Frontend Developer & UI Designer</span>
+                    </div>
+                    <div class="footer-copyright">
+                        <p>&copy; 2025 | All rights reserved.</p>
+                        <p>Made with <i class="fas fa-heart"></i> using HTML, CSS & JavaScript</p>
+                    </div>
+                    <div class="footer-status">
+                        <div class="status-indicator">
+                            <div class="status-dot"></div>
+                            <span>Available for work</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
