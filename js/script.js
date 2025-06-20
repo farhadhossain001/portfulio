@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize project filters after a short delay to ensure DOM is ready
     setTimeout(() => {
         initProjectFilters();
+        initSkillBars();
     }, 100);
 });
 
@@ -397,6 +398,70 @@ function initProjectFilters() {
             }, 50);
         });
     });
+}
+
+// ===== SKILL BARS ANIMATION =====
+function initSkillBars() {
+    const skillItems = document.querySelectorAll('.skill-item');
+
+    if (skillItems.length === 0) return;
+
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const skillItem = entry.target;
+                const skillProgress = skillItem.querySelector('.skill-progress');
+                const skillPercentage = skillItem.querySelector('.skill-percentage');
+                const targetWidth = skillProgress.getAttribute('data-width');
+
+                // Animate the progress bar
+                setTimeout(() => {
+                    skillProgress.style.width = targetWidth + '%';
+                }, 200);
+
+                // Animate the percentage number
+                animateNumber(skillPercentage, 0, parseInt(targetWidth), 2000);
+
+                // Unobserve after animation
+                skillObserver.unobserve(skillItem);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all skill items
+    skillItems.forEach(item => {
+        skillObserver.observe(item);
+    });
+}
+
+// ===== NUMBER ANIMATION FUNCTION =====
+function animateNumber(element, start, end, duration) {
+    const startTime = performance.now();
+    const range = end - start;
+
+    function updateNumber(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Use easeOutCubic for smooth animation
+        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(start + (range * easeOutCubic));
+
+        element.textContent = current + '%';
+
+        if (progress < 1) {
+            requestAnimationFrame(updateNumber);
+        } else {
+            element.textContent = end + '%';
+        }
+    }
+
+    requestAnimationFrame(updateNumber);
 }
 
 // ===== PROJECT HOVER EFFECTS =====
